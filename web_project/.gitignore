@@ -9,8 +9,8 @@ application/logs/*
 !application/logs/.htaccess
 
 composer.lock
+bower_components
 
-web_project/bower_components
 user_guide_src/build/*
 user_guide_src/cilexer/build/*
 user_guide_src/cilexer/dist/*
