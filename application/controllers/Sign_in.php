@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class InitDashboard extends CI_Controller {
+class Sign_in extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -20,6 +20,6 @@ class InitDashboard extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('dashboard');
+		$this->load->view('app/sign_in');
 	}
 }
