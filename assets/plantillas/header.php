@@ -267,7 +267,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </header>
 
     <div class="mdl-layout__drawer">
-        <header>darkboard</header>
+        <header>SISGEPRO</header>
         <nav class="mdl-navigation">
             <a class="mdl-navigation__link mdl-navigation__link--current" href="index.php">
                 <i class="material-icons" role="presentation">dashboard</i>

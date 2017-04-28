@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 <main class="auth-main">
   <div class="auth-block">
-    <h1>Sistema de Gestión de Proyectos</h1>
+    <h1>SISGEPRO</h1>
 
     <form class="form-horizontal">
       <div class="form-group">
