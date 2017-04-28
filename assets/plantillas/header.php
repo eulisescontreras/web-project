@@ -251,8 +251,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <i class="material-icons">more_vert</i>
             </button>
 
-            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect mdl-shadow--2dp settings-dropdown"
-                for="more">
+            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect mdl-shadow--2dp settings-dropdown" for="more">
                 <li class="mdl-menu__item">
                     Settings
                 </li>
