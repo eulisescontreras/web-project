@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "getmdl-dashboard": "material-dashboard-lite#^1.0.0-b"
   }
 }
