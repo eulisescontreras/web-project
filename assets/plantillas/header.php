@@ -20,12 +20,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 -->
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
-    <link rel="icon" type="image/png" href="img/DB_16х16.png">
+    <link rel="icon" type="image/png" href="/img/DB_16х16.png">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Material Dashboard Lite</title>
+    <title>Sistema de gestion de proyectos</title>
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
@@ -49,9 +49,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900' rel='stylesheet'type='text/css'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- inject:css -->
-    <link rel="stylesheet" href="vendor/getmdl-select/getmdl-select.min.css">
-    <link rel="stylesheet" href="vendor/nvd3/build/nv.d3.min.css">
-    <link rel="stylesheet" href="vendor/getmdl-dashboard/dist/css/application.css">
+    <link rel="stylesheet" href="/vendor/getmdl-select/getmdl-select.min.css">
+    <link rel="stylesheet" href="/vendor/nvd3/build/nv.d3.min.css">
+    <link rel="stylesheet" href="/vendor/getmdl-dashboard/dist/css/application.css">
+    <link rel="stylesheet" href="/assets/css/header.css">
+    <link rel="stylesheet" href="/assets/css/scroll.css">
+    <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.min.css">
     <!-- endinject -->
 
 </head>
@@ -60,7 +64,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 //]]></script>
 
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header is-small-screen">
-    <header class="mdl-layout__header">
+    <header class="mdl-layout__header mdl-layout__header--transparent">
         <div class="mdl-layout__header-row">
             <div class="mdl-layout-spacer"></div>
             <!-- Search-->

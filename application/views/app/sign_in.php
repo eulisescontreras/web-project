@@ -1,3 +1,6 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="Description" CONTENT="Free angular bootstrap admin dashboard template. World first blur panel dashboard.">
   <meta name="keywords" content="admin,dashboard,template,angular,bootstrap,blur,panel,html,css,javascript">
-  <title>Blur Admin</title>
+  <title>Sistema de gestion de proyectos</title>
   
   <link rel="stylesheet" href="vendor/sign-in/vendor.css">
   <link rel="stylesheet" href="vendor/sign-in/auth.css">
@@ -14,8 +17,7 @@
 <body>
 <main class="auth-main">
   <div class="auth-block">
-    <h1>Sign in to Blur Admin</h1>
-    <a href="reg.html" class="auth-link">New to Blur Admin? Sign up!</a>
+    <h1>Sistema de Gestión de Proyectos</h1>
 
     <form class="form-horizontal">
       <div class="form-group">

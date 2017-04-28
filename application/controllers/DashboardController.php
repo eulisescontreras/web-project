@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Init_dashboard extends CI_Controller {
+class DashboardController extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
