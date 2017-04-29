@@ -11,8 +11,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <meta name="keywords" content="admin,dashboard,template,angular,bootstrap,blur,panel,html,css,javascript">
   <title>Sistema de gestion de proyectos</title>
   
-  <link rel="stylesheet" href="vendor/sign-in/vendor.css">
-  <link rel="stylesheet" href="vendor/sign-in/auth.css">
+  <link rel="stylesheet" href="/assets/css/sign-in/vendor.css">
+  <link rel="stylesheet" href="/assets/css/sign-in/auth.css">
 </head>
 <body>
 <main class="auth-main">

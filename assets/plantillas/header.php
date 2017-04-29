@@ -49,11 +49,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900' rel='stylesheet'type='text/css'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- inject:css -->
-    <link rel="stylesheet" href="/vendor/getmdl-select/getmdl-select.min.css">
-    <link rel="stylesheet" href="/vendor/nvd3/build/nv.d3.min.css">
-    <link rel="stylesheet" href="/vendor/getmdl-dashboard/dist/css/application.css">
-    <link rel="stylesheet" href="/assets/css/header.css">
-    <link rel="stylesheet" href="/assets/css/scroll.css">
+    <link rel="stylesheet" href="/assets/css/dashboard/getmdl-select.min.css">
+    <link rel="stylesheet" href="/assets/css/dashboard/nv.d3.css">
+    <link rel="stylesheet" href="/assets/css/dashboard/application.css">
+    <link rel="stylesheet" href="/assets/css/dashboard/header.css">
+    <link rel="stylesheet" href="/assets/css/dashboard/scroll.css">
     <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.min.css">
     <!-- endinject -->
