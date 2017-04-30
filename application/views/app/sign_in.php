@@ -13,42 +13,43 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   
   <link rel="stylesheet" href="/assets/css/sign-in/vendor.css">
   <link rel="stylesheet" href="/assets/css/sign-in/auth.css">
+  <link rel="stylesheet" href="/vendor/components-font-awesome/css/font-awesome.css">
 </head>
 <body>
 <main class="auth-main">
   <div class="auth-block">
     <h1>SISGEPRO</h1>
 
-    <form class="form-horizontal">
-      <div class="form-group">
-        <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-
-        <div class="col-sm-10">
-          <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+    <form class="form-horizontal" method="post" action="<?php echo base_url(); ?>index.php/login">
+      <div class="row">
+        <div class="form-group">
+          <label for="inputEmail3" class="col-sm-2 control-label">Username</label>
+          <div class="col-sm-offset-1 col-sm-9">
+            <input type="text" class="form-control" name="Username" id="inputEmail3" placeholder="Username">
+          </div>
         </div>
-      </div>
-      <div class="form-group">
-        <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-
-        <div class="col-sm-10">
-          <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+        <div class="form-group">
+          <label for="inputPassword3" class="col-sm-2 control-label">Contraseña</label>
+          <div class="col-sm-offset-1 col-sm-9">
+            <input type="password" class="form-control" name="Password" id="inputPassword3" placeholder="Contraseña">
+          </div>
         </div>
-      </div>
-      <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
-          <button type="submit" class="btn btn-default btn-auth">Sign in</button>
-          <a href class="forgot-pass">Forgot password?</a>
+        <div class="form-group">
+          <div class="col-sm-offset-1 col-sm-10">
+            <button type="submit" class="btn btn-default btn-auth">Ingresar</button>
+            <a href="<?php echo base_url(); ?>index.php/forgot_password" class="forgot-pass">Olvidaste la contraseña?</a>
+          </div>
         </div>
+        <br/>
+        <div style="color: red; text-align: center; position: relative; top: 50%; -ms-transform: translateY(-50%); -webkit-transform: translateY(-50%); transform: translateY(-50%);"><?php echo $message;?></div>
       </div>
     </form>
-
-    <div class="auth-sep"><span><span>or Sign in with one click</span></span></div>
-
+    <div class="auth-sep"><span><span>o Logueate con un click</span></span></div>
     <div class="al-share-auth">
       <ul class="al-share clearfix">
-        <li><i class="socicon socicon-facebook" title="Share on Facebook"></i></li>
-        <li><i class="socicon socicon-twitter" title="Share on Twitter"></i></li>
-        <li><i class="socicon socicon-google" title="Share on Google Plus"></i></li>
+        <li><i class="fa fa-facebook" title="Share on Facebook"></i></li>
+        <li><i class="fa fa-twitter" title="Share on Twitter"></i></li>
+        <li><i class="fa fa-google" title="Share on Google Plus"></i></li>
       </ul>
     </div>
   </div>

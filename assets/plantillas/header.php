@@ -56,6 +56,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link rel="stylesheet" href="/assets/css/dashboard/scroll.css">
     <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/vendor/components-font-awesome/css/font-awesome.css">
     <!-- endinject -->
 
 </head>
@@ -268,7 +269,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="mdl-layout__drawer">
         <header>SISGEPRO</header>
         <nav class="mdl-navigation">
-            <a class="mdl-navigation__link mdl-navigation__link--current" href="index.php">
+            <a class="mdl-navigation__link" href="index.php">
                 <i class="material-icons" role="presentation">dashboard</i>
                 Dashboard
             </a>

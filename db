@@ -1,0 +1,74 @@
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+DROP TABLE IF EXISTS `rol_permissions` ;
+DROP TABLE IF EXISTS `user_rol` ;
+DROP TABLE IF EXISTS `user` ;
+DROP TABLE IF EXISTS `rol` ;
+DROP TABLE IF EXISTS `permissions` ;
+
+CREATE TABLE IF NOT EXISTS `webproject`.`user` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(50) NOT NULL,
+  `second_name` varchar(50) NOT NULL,
+  `surname` varchar(50) NOT NULL,
+  `second_surname` varchar(50) NOT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `address` varchar(200) NOT NULL,
+  `phone` varchar(20) NOT NULL,
+  `start_date` date NOT NULL,
+  `active` bit(1) NOT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=111112 ;
+
+INSERT INTO `user` (`Id`, `first_name`, `second_name`, `surname`, `second_surname`, `email`, `username`, `password`, `address`, `phone`, `start_date`,`active`) VALUES
+(23795053, 'eulises', 'elias de jesus', 'contreras', 'rengifo', 'eulises@hotmail.com', 'admin', AES_ENCRYPT('1234','webproject'),'Cagua edo Aragua','04243621691', '20160120', true);
+
+
+
+CREATE TABLE IF NOT EXISTS `webproject`.`permissions` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  `description` varchar(100) NOT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+CREATE TABLE IF NOT EXISTS `webproject`.`rol` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  `description` varchar(100) NOT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+CREATE TABLE IF NOT EXISTS `webproject`.`user_rol` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_user` int(11) NOT NULL,
+  `id_rol` int(11) NOT NULL,
+  PRIMARY KEY (`Id`),
+  KEY `id_user` (`id_user`),
+  KEY `id_rol` (`id_rol`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+CREATE TABLE IF NOT EXISTS `webproject`.`rol_permissions` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_rol` int(11) NOT NULL,
+  `id_permissions` int(11) NOT NULL,
+  PRIMARY KEY (`Id`),
+  KEY `id_user` (`id_rol`),
+  KEY `id_rol` (`id_permissions`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+ALTER TABLE `user_rol`
+  ADD CONSTRAINT `user_rol_ibfk_1` FOREIGN KEY (`id_rol`) REFERENCES `webproject`.`rol` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `user_rol_ibfk_2` FOREIGN KEY (`id_user`) REFERENCES `webproject`.`user` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+ALTER TABLE `rol_permissions`
+  ADD CONSTRAINT `rol_permissions_ibfk_1` FOREIGN KEY (`id_rol`) REFERENCES `webproject`.`rol` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `rol_permissions_ibfk_2` FOREIGN KEY (`id_permissions`) REFERENCES `webproject`.`permissions` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
