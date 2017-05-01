@@ -115,8 +115,8 @@
                     </div>
                 </div>
                 <!-- Table-->
-                <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone ">
-                    <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp projects-table">
+                <div style="overflow:auto !important;" class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone">
+                    <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
                         <thead>
                         <tr>
                             <th class="mdl-data-table__cell--non-numeric">Project</th>
