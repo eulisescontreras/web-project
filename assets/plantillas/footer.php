@@ -20,7 +20,9 @@
         <!-- endinject -->
         <!-- authenticate:js -->
         <script>
-            $('#table').DataTable();
+            $('#table').DataTable({
+                "scrollX": true
+            });
             redirectSessionEnd();
             setInterval('redirectSessionEnd()',300000);
             function redirectSessionEnd(){

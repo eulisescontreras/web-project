@@ -37,5 +37,6 @@ table.dataTable tbody tr {
 }
 
 .panel {
+    padding: 3%; 
     background-color: rgba(0,0,0,.5);
 }
