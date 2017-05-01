@@ -4284,7 +4284,7 @@ input.mdl-button[type="submit"] {
   width: auto;
   z-index: 1;
   position: relative;
-  background: #4e4e4e;
+  background-color: rgba(0,0,0,.5);
   border-radius: 2px;
   box-sizing: border-box; }
 
@@ -4615,16 +4615,16 @@ input.mdl-button[type="submit"] {
   left: 0;
   height: 100%;
   width: 100%;
-  mask: url("../images/tick-mask.svg?embed");
+  mask: url("/assets/img/tick-mask.svg?embed");
   background: transparent;
   transition-duration: 0.28s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: background; }
   .mdl-checkbox.is-checked .mdl-checkbox__tick-outline {
-    background: rgb(255, 82, 82) url("../images/tick.svg?embed"); }
+    background: rgb(255, 82, 82) url("/assets/img/tick.svg?embed"); }
   fieldset[disabled] .mdl-checkbox.is-checked .mdl-checkbox__tick-outline,
   .mdl-checkbox.is-checked.is-disabled .mdl-checkbox__tick-outline {
-    background: rgba(0,0,0, 0.26) url("../images/tick.svg?embed"); }
+    background: rgba(0,0,0, 0.26) url("/assets/img/tick.svg?embed"); }
 
 .mdl-checkbox__label {
   position: relative;
@@ -5105,7 +5105,7 @@ input.mdl-button[type="submit"] {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: background-color; }
     .mdl-data-table tbody tr.is-selected {
-      background-color: #4e4e4e; }
+      background-color: rgba(0,0,0,.5);}
     .mdl-data-table tbody tr:hover {
       background-color: rgba(0, 0, 0, 0.2); }
   .mdl-data-table td, .mdl-data-table th {
@@ -11191,7 +11191,7 @@ main {
   background-color: rgba(0, 0, 0, 0.3); }
 
 .mdl-card__supporting-text {
-  width: calc(100% - 32px); }
+  width: calc(100%); }
 
 .mdl-card__actions {
   padding: 8px 16px; }
@@ -11363,7 +11363,7 @@ main {
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2); }
 
 .mdl-checkbox__tick-outline {
-  -webkit-mask: url("../images/tick-mask.svg"); }
+  -webkit-mask: url("/assets/img/tick-mask.svg"); }
 
 .mdl-switch__label {
   left: 0;
@@ -11742,7 +11742,7 @@ a {
 .mdl-data-table {
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-weight: 300;
-  background-color: #4e4e4e;
+  background-color: rgba(0,0,0,.5);
   color: rgb(255, 255, 255);
   border: none; }
   .mdl-data-table tr:last-child td {
@@ -12032,7 +12032,7 @@ a {
     font-weight: 300;
     padding-bottom: 26px; }
   .robot .mdl-card__title {
-    background: url("../images/robot.png") center center no-repeat;
+    background: url("/assets/img/robot.png") center center no-repeat;
     background-size: cover; }
     .robot .mdl-card__title .mdl-card__title-text {
       color: rgb(255, 255, 255); }
@@ -12045,7 +12045,7 @@ a {
     font-weight: 300;
     padding-bottom: 26px; }
   .cotoneaster .mdl-card__title {
-    background: url("../images/cotoneaster.jpg") center center no-repeat;
+    background: url("/assets/img/cotoneaster.jpg") center center no-repeat;
     background-size: cover; }
     .cotoneaster .mdl-card__title .mdl-card__title-text {
       color: rgb(255, 255, 255); }
@@ -12058,7 +12058,7 @@ a {
   height: 329px; }
   .weather .mdl-card__supporting-text {
     color: rgba(255, 255, 255, 0.8);
-    background: url("../images/weather_bck.png") center center no-repeat;
+    background: url("/assets/img/weather_bck.png") center center no-repeat;
     background-size: cover;
     text-align: right;
     padding-top: 38px;
@@ -12080,7 +12080,7 @@ a {
         width: 35px;
         position: absolute;
         right: 150px;
-        content: url(../images/cloudy_and_snow.svg); }
+        content: url(/assets/img/cloudy_and_snow.svg); }
   .weather .mdl-card__title .mdl-card__subtitle-text {
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     font-size: 16px;

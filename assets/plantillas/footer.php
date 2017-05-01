@@ -1,7 +1,7 @@
             </main>
         </div>
         <!-- inject:js -->
-        <script src="/assets/js/dashboard/d3.js"></script>
+        <script src="https://d3js.org/d3.v4.min.js"  charset="utf-8"></script>
         <script src="/assets/js/dashboard/getmdl-select.min.js"></script>
         <script src="/assets/js/dashboard/material.js"></script>
         <script src="/assets/js/dashboard/nv.d3.js"></script>
@@ -32,6 +32,7 @@
                     }
                 });
             }
+             
         </script>
         <!-- authenticate:js -->
     </body>

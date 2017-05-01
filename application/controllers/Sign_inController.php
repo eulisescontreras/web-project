@@ -44,7 +44,7 @@ class Sign_inController extends CI_Controller {
 			  );
 			  $this->session->set_userdata($userCredentials);
 			  $this->session->set_flashdata('permissions',$data);
-			  redirect('dashboard');
+			  redirect('welcome');
 			}else{
 			  $this->session->set_flashdata('message',"Usuario no registrado.");
 			}
@@ -70,8 +70,14 @@ class Sign_inController extends CI_Controller {
     public function forgot_password(){
     	echo json_encode("forgot_password");
     }
-    
+
 	public function is_login(){
 		echo json_encode($this->session->userdata('Username'));
 	}
+	
+	public function welcome(){
+		$this->data['permissions'] = $this->session->flashdata('permissions');
+		$this->load->view('app/welcome',$this->data);
+	}
+	
 }

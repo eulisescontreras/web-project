@@ -54,11 +54,8 @@ $route['login'] = 'sign_inController/login';
 $route['is_login'] = 'sign_inController/is_login';
 $route['forgot_password'] = 'sign_inController/forgot_password';
 $route['logout'] = 'sign_inController/logout';
+$route['welcome'] = 'sign_inController/welcome';
 //sign_in
-
-//dashboard
-$route['dashboard'] = 'dashboardController/index';
-//dashboard
 
 //default
 $route['default_controller'] = 'sign_inController/index';
