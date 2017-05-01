@@ -136,10 +136,7 @@
                             <td class="mdl-data-table__cell--non-numeric">Luke@skywalker.com</td>
                             <td class="mdl-data-table__cell--non-numeric">Jun 15</td>
                             <td class="mdl-data-table__cell--non-numeric">
-                                <div id="task0" class="mdl-progress mdl-js-progress"></div>
-                                <div class="mdl-tooltip" for="task0">
-                                    0%
-                                </div>
+                                0%<div id="task0" class="mdl-progress mdl-js-progress"></div>
                             </td>
                         </tr>
                         <tr>
@@ -150,10 +147,7 @@
                             <td class="mdl-data-table__cell--non-numeric">Boss@financial.com</td>
                             <td class="mdl-data-table__cell--non-numeric">Mar 1</td>
                             <td class="mdl-data-table__cell--non-numeric">
-                                <div id="task22" class="mdl-progress mdl-js-progress"></div>
-                                <div class="mdl-tooltip" for="task22">
-                                    22%
-                                </div>
+                                22%<div id="task22" class="mdl-progress mdl-js-progress"></div>
                             </td>
                         </tr>
                         <tr class="is-selected">
@@ -176,10 +170,7 @@
                             <td class="mdl-data-table__cell--non-numeric">Contact@happyness.com</td>
                             <td class="mdl-data-table__cell--non-numeric">Yesterday</td>
                             <td class="mdl-data-table__cell--non-numeric">
-                                <div id="task32" class="mdl-progress mdl-js-progress"></div>
-                                <div class="mdl-tooltip" for="task32">
-                                    32%
-                                </div>
+                                32%<div id="task32" class="mdl-progress mdl-js-progress"></div>
                             </td>
                         </tr>
                         <tr>
@@ -190,10 +181,7 @@
                             <td class="mdl-data-table__cell--non-numeric">Contact@happyness.com</td>
                             <td class="mdl-data-table__cell--non-numeric">Yesterday</td>
                             <td class="mdl-data-table__cell--non-numeric">
-                                <div id="task99" class="mdl-progress mdl-js-progress"></div>
-                                <div class="mdl-tooltip" for="task99">
-                                    99%
-                                </div>
+                                99%<div id="task99" class="mdl-progress mdl-js-progress"></div>
                             </td>
                         </tr>
                         <tr>
@@ -204,10 +192,7 @@
                             <td class="mdl-data-table__cell--non-numeric">Contact@happyness.com</td>
                             <td class="mdl-data-table__cell--non-numeric">Yesterday</td>
                             <td class="mdl-data-table__cell--non-numeric">
-                                <div id="task50" class="mdl-progress mdl-js-progress"></div>
-                                <div class="mdl-tooltip" for="task50">
-                                    50%
-                                </div>
+                                50%<div id="task50" class="mdl-progress mdl-js-progress"></div>
                             </td>
                         </tr>
                         <tr>
@@ -218,10 +203,29 @@
                             <td class="mdl-data-table__cell--non-numeric">Contact@happyness.com</td>
                             <td class="mdl-data-table__cell--non-numeric">Yesterday</td>
                             <td class="mdl-data-table__cell--non-numeric">
-                                <div id="task100" class="mdl-progress mdl-js-progress"></div>
-                                <div class="mdl-tooltip" for="task100">
-                                    50%
-                                </div>
+                                50%<div id="task50" class="mdl-progress mdl-js-progress"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mdl-data-table__cell--non-numeric">Don't worry, be happy!!!</td>
+                            <td class="mdl-data-table__cell--non-numeric">
+                                <span class="label label--mini background-color--secondary">Everybody</span>
+                            </td>
+                            <td class="mdl-data-table__cell--non-numeric">Contact@happyness.com</td>
+                            <td class="mdl-data-table__cell--non-numeric">Yesterday</td>
+                            <td class="mdl-data-table__cell--non-numeric">
+                                100%<div id="task100" class="mdl-progress mdl-js-progress"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="mdl-data-table__cell--non-numeric">Don't worry, be happy!!!</td>
+                            <td class="mdl-data-table__cell--non-numeric">
+                                <span class="label label--mini background-color--secondary">Everybody</span>
+                            </td>
+                            <td class="mdl-data-table__cell--non-numeric">Contact@happyness.com</td>
+                            <td class="mdl-data-table__cell--non-numeric">Yesterday</td>
+                            <td class="mdl-data-table__cell--non-numeric">
+                                100%<div id="task100" class="mdl-progress mdl-js-progress"></div>
                             </td>
                         </tr>
                         </tbody>

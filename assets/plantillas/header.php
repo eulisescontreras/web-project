@@ -62,10 +62,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- endinject -->
 
 </head>
-<body><script id="__bs_script__">//<![CDATA[
-    document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.18.6'><\/script>".replace("HOST", location.hostname));
-//]]></script>
-
+<body>
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header is-small-screen">
     <header class="mdl-layout__header mdl-layout__header--transparent">
         <div class="mdl-layout__header-row">
@@ -219,7 +216,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         Datos personales
                     </span>
                 </li>
-                <?php if($rols['Auditor de campo']){ ?>
+                <?php if($rols['Auditor de campo'] || $rols['Auditor General']){ ?>
                     <li class="mdl-menu__item mdl-list__item">
                         <span class="mdl-list__item-primary-content">
                             <i class="material-icons mdl-list__item-icon">check_box</i>
@@ -230,7 +227,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </span>
                     </li>
                 <?php } ?>
-                <?php if($rols['Sub Auditor']){ ?>    
+                <?php if($rols['Sub Auditor'] || $rols['Auditor General']){ ?>    
                     <li class="mdl-menu__item mdl-list__item">
                         <span class="mdl-list__item-primary-content">
                             <i class="material-icons mdl-list__item-icon">check_box</i>

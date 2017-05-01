@@ -17,6 +17,7 @@
         <script src="/assets/js/dashboard/widgets/todo/todo.js"></script>
         <script src="/vendor/jquery/dist/jquery.min.js"></script>
         <script src="/vendor/datatables/media/js/jquery.dataTables.min.js"></script>
+        
         <!-- endinject -->
         <!-- authenticate:js -->
         <script>
