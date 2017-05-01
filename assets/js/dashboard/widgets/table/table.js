@@ -608,7 +608,7 @@
        });
       }
       setTimeout(() => {
-          document.querySelector('.mdl-data-table .is-selected td > label').classList.add('is-checked');
+          document.querySelector('.projects-table .is-selected td > label').classList.add('is-checked');
           componentHandler.upgradeDom();
       }, 100);
   }

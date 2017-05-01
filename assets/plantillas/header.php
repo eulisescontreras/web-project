@@ -49,6 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900' rel='stylesheet'type='text/css'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- inject:css -->
+    <link rel="stylesheet" href="/vendor/datatables/media/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="/assets/css/dashboard/getmdl-select.min.css">
     <link rel="stylesheet" href="/assets/css/dashboard/nv.d3.css">
     <link rel="stylesheet" href="/assets/css/dashboard/application.css">
@@ -57,6 +58,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/vendor/components-font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="/assets/css/dashboard/tables.css">
     <!-- endinject -->
 
 </head>
@@ -242,30 +244,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <li class="mdl-menu__item mdl-list__item">
                     <span class="mdl-list__item-primary-content">
                         <i class="material-icons mdl-list__item-icon text-color--secondary">exit_to_app</i>
-                        Log out
+                        <a href="<?php echo base_url(); ?>index.php/logout">Cerrar sesión</a>
                     </span>
                 </li>
             </ul>
-
-            <button id="more"
-                    class="mdl-button mdl-js-button mdl-button--icon">
-                <i class="material-icons">more_vert</i>
-            </button>
-            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect mdl-shadow--2dp settings-dropdown" for="more">
-                <?php if($permissions['Soporte']){ ?>
+            <?php if($permissions['Soporte']){ ?>
+                <button id="more"
+                        class="mdl-button mdl-js-button mdl-button--icon">
+                    <i class="material-icons">more_vert</i>
+                </button>
+                <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect mdl-shadow--2dp settings-dropdown" for="more">
                     <a class="mdl-menu__item" href="#">
                         Soporte.
                     </a>
-                <?php } ?>
-                <a class="mdl-menu__item" href="<?php echo base_url(); ?>index.php/logout">
-                    Cerrar Sesión.
-                </a>
-            </ul>
+                </ul>
+            <?php } ?>
         </div>
     </header>
 
     <div class="mdl-layout__drawer">
-        <header>SISGEPRO</header>
+        <header style="color:#dfb81c;">SISGEPRO</header>
         <nav class="mdl-navigation">
             <a class="mdl-navigation__link" href="index.php">
                 <i class="material-icons" role="presentation">dashboard</i>

@@ -11800,10 +11800,6 @@ a {
     .projects-table tbody .task-done .material-icons {
       cursor: pointer; }
 
-@media screen and (max-width: 848px) {
-  .projects-table {
-    display: none; } }
-
 .mdl-tooltip {
   padding: 5px 8px;
   border: none;

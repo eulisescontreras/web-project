@@ -26,7 +26,8 @@ class Sign_inController extends CI_Controller {
 	public function index(){
 		$userCredentials = array(
 			"Username" => null,
-			"Password" => null
+			"Password" => null,
+			"permissions" => null
 	    );
 	    $this->session->set_userdata($userCredentials);
 	    $this->data['message'] = $this->session->flashdata('message');
@@ -40,10 +41,10 @@ class Sign_inController extends CI_Controller {
 			  $data = $this->Sign_inModel->send_permissions($this->input->post("Username"),$this->input->post("Password"));
 			  $userCredentials = array(
 					"Username" => $this->input->post("Username"),
-					"Password" => $this->input->post("Password")
+					"Password" => $this->input->post("Password"),
+					"Permissions" => $data
 			  );
 			  $this->session->set_userdata($userCredentials);
-			  $this->session->set_flashdata('permissions',$data);
 			  redirect('welcome');
 			}else{
 			  $this->session->set_flashdata('message',"Usuario no registrado.");
@@ -76,7 +77,7 @@ class Sign_inController extends CI_Controller {
 	}
 	
 	public function welcome(){
-		$this->data['permissions'] = $this->session->flashdata('permissions');
+		$this->data['permissions'] = $this->session->userdata('Permissions');
 		$this->load->view('app/welcome',$this->data);
 	}
 	

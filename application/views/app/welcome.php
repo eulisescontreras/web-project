@@ -1,122 +1,121 @@
 <?php include 'assets/plantillas/header.php' ?>
-  <div class="mdl-grid mdl-grid--no-spacing">
+    <div class="mdl-grid mdl-grid--no-spacing">
+        <div class="mdl-grid mdl-cell mdl-cell--9-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone mdl-cell--top">
+            <!-- Pie chart-->
+            <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                <div class="mdl-card mdl-shadow--2dp pie-chart">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">My Day</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <div class="pie-chart__container">
 
-            <div class="mdl-grid mdl-cell mdl-cell--9-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone mdl-cell--top">
-
-                <!-- Pie chart-->
-                <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--2-col-phone">
-                    <div class="mdl-card mdl-shadow--2dp pie-chart">
-                        <div class="mdl-card__title">
-                            <h2 class="mdl-card__title-text">My Day</h2>
-                        </div>
-                        <div class="mdl-card__supporting-text">
-                            <div class="pie-chart__container">
-
-                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- Weather widget-->
-                <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--2-col-phone">
-                    <div class="mdl-card mdl-shadow--2dp weather">
-                        <div class="mdl-card__title">
-                            <h2 class="mdl-card__title-text">Now</h2>
+            </div>
+            <!-- Weather widget-->
+            <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                <div class="mdl-card mdl-shadow--2dp weather">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Now</h2>
 
-                            <div class="mdl-layout-spacer"></div>
-                            <div class="mdl-card__subtitle-text">
-                                <i class="material-icons">room</i>
-                                Minsk, Belarus
-                            </div>
+                        <div class="mdl-layout-spacer"></div>
+                        <div class="mdl-card__subtitle-text">
+                            <i class="material-icons">room</i>
+                            Minsk, Belarus
                         </div>
-                        <div class="mdl-card__supporting-text mdl-card--expand">
-                            <p class="weather-temperature">-11<sup>&deg;</sup></p>
+                    </div>
+                    <div class="mdl-card__supporting-text mdl-card--expand">
+                        <p class="weather-temperature">-11<sup>&deg;</sup></p>
 
-                            <p class="weather-description">
-                                Cloudy and snow
-                            </p>
-                        </div>
+                        <p class="weather-description">
+                            Cloudy and snow
+                        </p>
                     </div>
                 </div>
-                <!-- Trending widget-->
-                <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--2-col-phone">
-                    <div class="mdl-card mdl-shadow--2dp trending">
-                        <div class="mdl-card__title">
-                            <h2 class="mdl-card__title-text">Trending</h2>
-                        </div>
-                        <div class="mdl-card__supporting-text">
-                            <ul class="mdl-list">
-                                <li class="mdl-list__item">
-                                    <span class="mdl-list__item-primary-content list__item-text">UX</span>
-                                    <span class="mdl-list__item-secondary-content">
-                                        <i class="material-icons trending__arrow-up" role="presentation">&#xE5C7</i>
-                                    </span>
-                                    <span class="mdl-list__item-secondary-content trending__percent">1 %</span>
-                                </li>
-                                <li class="mdl-list__item list__item--border-top">
-                                    <span class="mdl-list__item-primary-content list__item-text">PHP</span>
-                                    <span class="mdl-list__item-secondary-content">
-                                        <i class="material-icons trending__arrow-down" role="presentation">&#xE5C5</i>
-                                    </span>
-                                    <span class="mdl-list__item-secondary-content trending__percent">2 %</span>
-                                </li>
-                                <li class="mdl-list__item list__item--border-top">
-                                    <span class="mdl-list__item-primary-content list__item-text ">Big Data</span>
-                                    <span class="mdl-list__item-secondary-content">
-                                        <i class="material-icons trending__arrow-up" role="presentation">&#xE5C7</i>
-                                    </span>
-                                    <span class="mdl-list__item-secondary-content trending__percent">5 %</span>
-                                </li>
-                                <li class="mdl-list__item list__item--border-top">
-                                    <span class="mdl-list__item-primary-content list__item-text">Material Design</span>
-                                    <span class="mdl-list__item-secondary-content">
-                                        <i class="material-icons trending__arrow-up" role="presentation">&#xE5C7</i>
-                                    </span>
-                                    <span class="mdl-list__item-secondary-content trending__percent">18 %</span>
-                                </li>
-                                <li class="mdl-list__item list__item--border-top">
-                                    <span class="mdl-list__item-primary-content">JavaScript</span>
-                                    <span class="mdl-list__item-secondary-content">
-                                        <i class="material-icons trending__arrow-up" role="presentation">&#xE5C7</i>
-                                    </span>
-                                    <span class="mdl-list__item-secondary-content trending__percent">17 %</span>
-                                </li>
-                            </ul>
-                        </div>
+            </div>
+            <!-- Trending widget-->
+            <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                <div class="mdl-card mdl-shadow--2dp trending">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Trending</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <ul class="mdl-list">
+                            <li class="mdl-list__item">
+                                <span class="mdl-list__item-primary-content list__item-text">UX</span>
+                                <span class="mdl-list__item-secondary-content">
+                                    <i class="material-icons trending__arrow-up" role="presentation">&#xE5C7</i>
+                                </span>
+                                <span class="mdl-list__item-secondary-content trending__percent">1 %</span>
+                            </li>
+                            <li class="mdl-list__item list__item--border-top">
+                                <span class="mdl-list__item-primary-content list__item-text">PHP</span>
+                                <span class="mdl-list__item-secondary-content">
+                                    <i class="material-icons trending__arrow-down" role="presentation">&#xE5C5</i>
+                                </span>
+                                <span class="mdl-list__item-secondary-content trending__percent">2 %</span>
+                            </li>
+                            <li class="mdl-list__item list__item--border-top">
+                                <span class="mdl-list__item-primary-content list__item-text ">Big Data</span>
+                                <span class="mdl-list__item-secondary-content">
+                                    <i class="material-icons trending__arrow-up" role="presentation">&#xE5C7</i>
+                                </span>
+                                <span class="mdl-list__item-secondary-content trending__percent">5 %</span>
+                            </li>
+                            <li class="mdl-list__item list__item--border-top">
+                                <span class="mdl-list__item-primary-content list__item-text">Material Design</span>
+                                <span class="mdl-list__item-secondary-content">
+                                    <i class="material-icons trending__arrow-up" role="presentation">&#xE5C7</i>
+                                </span>
+                                <span class="mdl-list__item-secondary-content trending__percent">18 %</span>
+                            </li>
+                            <li class="mdl-list__item list__item--border-top">
+                                <span class="mdl-list__item-primary-content">JavaScript</span>
+                                <span class="mdl-list__item-secondary-content">
+                                    <i class="material-icons trending__arrow-up" role="presentation">&#xE5C7</i>
+                                </span>
+                                <span class="mdl-list__item-secondary-content trending__percent">17 %</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <!-- Cotoneaster card-->
-                <div class="mdl-cell mdl-cell--5-col-desktop mdl-cell--5-col-tablet mdl-cell--2-col-phone">
-                    <div class="mdl-card mdl-shadow--2dp cotoneaster">
-                        <div class="mdl-card__title mdl-card--expand">
-                            <h2 class="mdl-card__title-text">Cotoneaster</h2>
+            </div>
+            <!-- Cotoneaster card-->
+            <div class="mdl-cell mdl-cell--5-col-desktop mdl-cell--5-col-tablet mdl-cell--2-col-phone">
+                <div class="mdl-card mdl-shadow--2dp cotoneaster">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h2 class="mdl-card__title-text">Cotoneaster</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <div>
+                            Cotoneaster is a genus of flowering plants in the rose family, Roseaceae, netive to the
+                            Palaearctic region, with a strong concentration of diversity in the genus in the
+                            mountains
+                            of southwestern China and the Himalayas.
                         </div>
-                        <div class="mdl-card__supporting-text">
-                            <div>
-                                Cotoneaster is a genus of flowering plants in the rose family, Roseaceae, netive to the
-                                Palaearctic region, with a strong concentration of diversity in the genus in the
-                                mountains
-                                of southwestern China and the Himalayas.
-                            </div>
-                            <a href="https://en.wikipedia.org/wiki/Cotoneaster" target="_blank">Wikipedia</a>
-                        </div>
+                        <a href="https://en.wikipedia.org/wiki/Cotoneaster" target="_blank">Wikipedia</a>
                     </div>
                 </div>
-                <!-- Line chart-->
-                <div class="mdl-cell mdl-cell--7-col-desktop mdl-cell--7-col-tablet mdl-cell--4-col-phone">
-                    <div class="mdl-card mdl-shadow--2dp line-chart">
-                        <div class="mdl-card__title">
-                            <h2 class="mdl-card__title-text">Startup Financing Cycle</h2>
-                        </div>
-                        <div class="mdl-card__supporting-text">
-                            <div class="line-chart__container">
+            </div>
+            <!-- Line chart-->
+            <div class="mdl-cell mdl-cell--7-col-desktop mdl-cell--7-col-tablet mdl-cell--4-col-phone">
+                <div class="mdl-card mdl-shadow--2dp line-chart">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Startup Financing Cycle</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <div class="line-chart__container">
 
-                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- Table-->
-                <div style="overflow:auto !important;" class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone">
-                    <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+            </div>
+            <!-- Table-->
+            <div style="overflow:auto !important;" class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone">
+                <div class="panel">
+                    <table id="table" class="table mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp projects-table">
                         <thead>
                         <tr>
                             <th class="mdl-data-table__cell--non-numeric">Project</th>
@@ -229,44 +228,44 @@
                     </table>
                 </div>
             </div>
+        </div>
 
-            <div class="mdl-grid mdl-cell mdl-cell--3-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone mdl-cell--top">
-                <!-- Robot card-->
-                <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--6-col-tablet mdl-cell--2-col-phone">
-                    <div class="mdl-card mdl-shadow--2dp robot">
-                        <div class="mdl-card__title mdl-card--expand">
-                            <h2 class="mdl-card__title-text">BB-8</h2>
+        <div class="mdl-grid mdl-cell mdl-cell--3-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone mdl-cell--top">
+            <!-- Robot card-->
+            <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--6-col-tablet mdl-cell--2-col-phone">
+                <div class="mdl-card mdl-shadow--2dp robot">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h2 class="mdl-card__title-text">BB-8</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <div>
+                            A skittish but loyal astromech, BB-8 accompanied Poe Dameron on many missions for the
+                            Resistance helping keep his X-wing in working order.
                         </div>
-                        <div class="mdl-card__supporting-text">
-                            <div>
-                                A skittish but loyal astromech, BB-8 accompanied Poe Dameron on many missions for the
-                                Resistance helping keep his X-wing in working order.
-                            </div>
-                            <a href="http://www.starwars.com/databank/bb-8" target="_blank">Star Wars Databank</a>
-                        </div>
+                        <a href="http://www.starwars.com/databank/bb-8" target="_blank">Star Wars Databank</a>
                     </div>
                 </div>
-                <!-- ToDo_widget-->
-                <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--6-col-tablet mdl-cell--2-col-phone">
-                    <div class="mdl-card mdl-shadow--2dp todo">
-                        <div class="mdl-card__title">
-                            <h2 class="mdl-card__title-text">To-do list</h2>
-                        </div>
-                        <div class="mdl-card__supporting-text">
-                            <ul class="mdl-list">
+            </div>
+            <!-- ToDo_widget-->
+            <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--6-col-tablet mdl-cell--2-col-phone">
+                <div class="mdl-card mdl-shadow--2dp todo">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">To-do list</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <ul class="mdl-list">
 
-                            </ul>
-                        </div>
-                        <div class="mdl-card__actions">
-                            <button class="mdl-button mdl-js-button mdl-js-ripple-effect">remove selected</button>
-                            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--fab mdl-shadow--8dp mdl-button--colored ">
-                                <i class="material-icons mdl-js-ripple-effect">add</i>
-                            </button>
-                        </div>
+                        </ul>
+                    </div>
+                    <div class="mdl-card__actions">
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect">remove selected</button>
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--fab mdl-shadow--8dp mdl-button--colored ">
+                            <i class="material-icons mdl-js-ripple-effect">add</i>
+                        </button>
                     </div>
                 </div>
-
             </div>
         </div>
+    </div>
 
 <?php include 'assets/plantillas/footer.php' ?>

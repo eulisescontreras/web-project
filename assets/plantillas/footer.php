@@ -16,9 +16,11 @@
         <script src="/assets/js/dashboard/widgets/table/table.js"></script>
         <script src="/assets/js/dashboard/widgets/todo/todo.js"></script>
         <script src="/vendor/jquery/dist/jquery.min.js"></script>
+        <script src="/vendor/datatables/media/js/jquery.dataTables.min.js"></script>
         <!-- endinject -->
         <!-- authenticate:js -->
         <script>
+            $('#table').DataTable();
             redirectSessionEnd();
             setInterval('redirectSessionEnd()',300000);
             function redirectSessionEnd(){
