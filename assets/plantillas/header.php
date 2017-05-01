@@ -202,45 +202,52 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </ul>
 
             <div class="avatar-dropdown" id="icon">
-                <span>Luke</span>
+                <span><?php echo $personal_data[0]['first_name']." ".$personal_data[0]['second_name']." ".$personal_data[0]['surname']." ".$personal_data[0]['second_surname'] ?></span>
             </div>
             <!-- Account dropdawn-->
             <ul class="mdl-menu mdl-list mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect mdl-shadow--2dp account-dropdown" for="icon">
                 <li class="mdl-list__item mdl-list__item--two-line">
                     <span class="mdl-list__item-primary-content">
-                        <span>Luke</span>
-                        <span class="mdl-list__item-sub-title">Luke@skywalker.com</span>
+                        <span><?php echo $personal_data[0]['first_name']." ".$personal_data[0]['second_name']." ".$personal_data[0]['surname']." ".$personal_data[0]['second_surname'] ?></span>
+                        <span class="mdl-list__item-sub-title"><?php echo $personal_data[0]['email'] ?></span>
                     </span>
                 </li>
                 <li class="list__item--border-top"></li>
                 <li class="mdl-menu__item mdl-list__item">
                     <span class="mdl-list__item-primary-content">
                         <i class="material-icons mdl-list__item-icon">account_circle</i>
-                        My account
+                        Datos personales
                     </span>
                 </li>
-                <li class="mdl-menu__item mdl-list__item">
-                    <span class="mdl-list__item-primary-content">
-                        <i class="material-icons mdl-list__item-icon">check_box</i>
-                        My tasks
-                    </span>
-                    <span class="mdl-list__item-secondary-content">
-                      <span class="label background-color--primary">3 new</span>
-                    </span>
-                </li>
-                <li class="mdl-menu__item mdl-list__item">
-                    <span class="mdl-list__item-primary-content">
-                        <i class="material-icons mdl-list__item-icon">perm_contact_calendar</i>
-                        My events
-                    </span>
-                </li>
-                <li class="list__item--border-top"></li>
+                <?php if($rols['Auditor de campo']){ ?>
+                    <li class="mdl-menu__item mdl-list__item">
+                        <span class="mdl-list__item-primary-content">
+                            <i class="material-icons mdl-list__item-icon">check_box</i>
+                            Modulos Asignados
+                        </span>
+                        <span class="mdl-list__item-secondary-content">
+                          <span class="label background-color--primary">3 new</span>
+                        </span>
+                    </li>
+                <?php } ?>
+                <?php if($rols['Sub Auditor']){ ?>    
+                    <li class="mdl-menu__item mdl-list__item">
+                        <span class="mdl-list__item-primary-content">
+                            <i class="material-icons mdl-list__item-icon">check_box</i>
+                            Proyectos Asignados
+                        </span>
+                        <span class="mdl-list__item-secondary-content">
+                          <span class="label background-color--primary">3 new</span>
+                        </span>
+                    </li>
+                <?php } ?>
+                <!--<li class="list__item--border-top"></li>
                 <li class="mdl-menu__item mdl-list__item">
                     <span class="mdl-list__item-primary-content">
                         <i class="material-icons mdl-list__item-icon">settings</i>
                         Settings
                     </span>
-                </li>
+                </li>-->
                 <li class="mdl-menu__item mdl-list__item">
                     <span class="mdl-list__item-primary-content">
                         <i class="material-icons mdl-list__item-icon text-color--secondary">exit_to_app</i>
@@ -272,48 +279,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="sub-navigation">
                 <a class="mdl-navigation__link">
                     <i class="material-icons">view_comfy</i>
-                    UI
+                    Sub-directory
                     <i class="material-icons">keyboard_arrow_down</i>
                 </a>
                 <div class="mdl-navigation">
-                    <a class="mdl-navigation__link" href="ui-buttons.html">
-                        Buttons
-                    </a>
-                    <a class="mdl-navigation__link" href="ui-cards.html">
-                        Cards
-                    </a>
-                    <a class="mdl-navigation__link" href="ui-colors.html">
-                        Colors
-                    </a>
-                    <a class="mdl-navigation__link" href="ui-components.html">
-                        Components
-                    </a>
-                    <a class="mdl-navigation__link" href="ui-icons.html">
-                        Icons
-                    </a>
-                    <a class="mdl-navigation__link" href="ui-typography.html">
-                        Typography
+                    <a class="mdl-navigation__link" href="#">
+                        option1
                     </a>
                 </div>
             </div>
-            <a class="mdl-navigation__link" href="#">
-                <i class="material-icons" role="presentation">person</i>
-                Account
-            </a>
-            <a class="mdl-navigation__link" href="#">
-                <i class="material-icons" role="presentation">map</i>
-                Maps
-            </a>
-            <a class="mdl-navigation__link" href="#">
-                <i class="material-icons">multiline_chart</i>
-                Charts
-            </a>
-
-            <!--<div class="mdl-layout-spacer"></div>
-            <a class="mdl-navigation__link" href="#">
-                <i class="material-icons" role="presentation">link</i>
-                GitHub
-            </a>-->
         </nav>
     </div>
     <main class="mdl-layout__content">

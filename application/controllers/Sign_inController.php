@@ -27,7 +27,10 @@ class Sign_inController extends CI_Controller {
 		$userCredentials = array(
 			"Username" => null,
 			"Password" => null,
-			"permissions" => null
+			"Permissions" => null,
+			"Rols" => null,
+			"Personal_data" => null
+
 	    );
 	    $this->session->set_userdata($userCredentials);
 	    $this->data['message'] = $this->session->flashdata('message');
@@ -38,12 +41,17 @@ class Sign_inController extends CI_Controller {
 		
 		if($this->input->post("Username") != "" and  $this->input->post("Password") != ""){
 			if($this->Sign_inModel->authenticate($this->input->post("Username"),$this->input->post("Password"))){
-			  $data = $this->Sign_inModel->send_permissions($this->input->post("Username"),$this->input->post("Password"));
+			  $permissions = $this->Sign_inModel->send_permissions($this->input->post("Username"),$this->input->post("Password"));
+			  $rols = $this->Sign_inModel->send_rols($this->input->post("Username"),$this->input->post("Password"));
+			  $personalData = $this->Sign_inModel->send_personal_data($this->input->post("Username"),$this->input->post("Password"));
 			  $userCredentials = array(
 					"Username" => $this->input->post("Username"),
 					"Password" => $this->input->post("Password"),
-					"Permissions" => $data
+					"Permissions" => $permissions,
+					"Rols" => $rols,
+					"Personal_data" => $personalData
 			  );
+			  //echo json_encode($personalData);
 			  $this->session->set_userdata($userCredentials);
 			  redirect('welcome');
 			}else{
@@ -61,7 +69,10 @@ class Sign_inController extends CI_Controller {
 	public function logout() {
 		$userCredentials = array(
 			"Username" => null,
-			"Password" => null
+			"Password" => null,
+			"Permissions" => null,
+			"Rols" => null,
+			"Personal_data" => null
 	    );
 	    $this->session->set_userdata($userCredentials);
 	    $this->session->set_flashdata('message', "");
@@ -78,6 +89,8 @@ class Sign_inController extends CI_Controller {
 	
 	public function welcome(){
 		$this->data['permissions'] = $this->session->userdata('Permissions');
+		$this->data['personal_data'] = $this->session->userdata('Personal_data');
+		$this->data['rols'] = $this->session->userdata('Rols');
 		$this->load->view('app/welcome',$this->data);
 	}
 	

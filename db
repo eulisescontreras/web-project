@@ -46,8 +46,8 @@ CREATE TABLE IF NOT EXISTS `webproject`.`rol` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 INSERT INTO `rol` (`Id`, `name`, `description`) VALUES
-(1, 'Auditor General', 'Tiene acceso a todos los modulos, asigna proyectos por sub auditor.');
-(2, 'Sub Auditor', 'Administra y designa los modulos a desarrollar por los auditores de campo.');
+(1, 'Auditor General', 'Tiene acceso a todos los modulos, asigna proyectos por sub auditor.'),
+(2, 'Sub Auditor', 'Administra y designa los modulos a desarrollar por los auditores de campo.'),
 (3, 'Auditor de campo', 'Se encarga de desarrollar y administrar las tareas de los modulos que se le designo.');
 
 
