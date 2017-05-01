@@ -265,9 +265,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="mdl-layout__drawer">
         <header style="color:#dfb81c;">SISGEPRO</header>
         <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="index.php">
-                <i class="material-icons" role="presentation">dashboard</i>
-                Dashboard
+            <a class="mdl-navigation__link" href="<?php echo base_url(); ?>index.php/welcome">
+                <i class="material-icons" role="presentation">home</i>
+                Inicio
             </a>
             <div class="sub-navigation">
                 <a class="mdl-navigation__link">
@@ -309,11 +309,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 Charts
             </a>
 
-            <div class="mdl-layout-spacer"></div>
+            <!--<div class="mdl-layout-spacer"></div>
             <a class="mdl-navigation__link" href="#">
                 <i class="material-icons" role="presentation">link</i>
                 GitHub
-            </a>
+            </a>-->
         </nav>
     </div>
     <main class="mdl-layout__content">
