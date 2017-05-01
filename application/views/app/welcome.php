@@ -134,7 +134,7 @@
                                 <span class="label label--mini background-color--cerulean">Misha</span>
                             </td>
                             <td class="mdl-data-table__cell--non-numeric">Luke@skywalker.com</td>
-                            <td class="mdl-data-table__cell--non-numeric">Jun 15</td>
+                            <td class="mdl-data-table__cell--non-numeric">15</td>
                             <td class="mdl-data-table__cell--non-numeric">
                                 0%<div id="task0" class="mdl-progress mdl-js-progress"></div>
                             </td>
