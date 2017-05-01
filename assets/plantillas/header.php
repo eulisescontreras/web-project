@@ -251,17 +251,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     class="mdl-button mdl-js-button mdl-button--icon">
                 <i class="material-icons">more_vert</i>
             </button>
-
             <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect mdl-shadow--2dp settings-dropdown" for="more">
-                <li class="mdl-menu__item">
-                    Settings
-                </li>
-                <a class="mdl-menu__item" href="#">
-                    Support
+                <?php if($permissions['Soporte']){ ?>
+                    <a class="mdl-menu__item" href="#">
+                        Soporte.
+                    </a>
+                <?php } ?>
+                <a class="mdl-menu__item" href="<?php echo base_url(); ?>index.php/logout">
+                    Cerrar Sesión.
                 </a>
-                <li class="mdl-menu__item">
-                    F.A.Q.
-                </li>
             </ul>
         </div>
     </header>
@@ -320,5 +318,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </a>
         </nav>
     </div>
-
     <main class="mdl-layout__content">

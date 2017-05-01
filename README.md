@@ -12,3 +12,10 @@ $ bower install
 ```bash
 $ bower install 'package name' --save
 ```
+
+### General auditor's credentials  
+
+```bash
+username: admin
+password: 1234
+```

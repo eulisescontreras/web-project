@@ -27,8 +27,6 @@ CREATE TABLE IF NOT EXISTS `webproject`.`user` (
 INSERT INTO `user` (`Id`, `first_name`, `second_name`, `surname`, `second_surname`, `email`, `username`, `password`, `address`, `phone`, `start_date`,`active`) VALUES
 (23795053, 'eulises', 'elias de jesus', 'contreras', 'rengifo', 'eulises@hotmail.com', 'admin', AES_ENCRYPT('1234','webproject'),'Cagua edo Aragua','04243621691', '20160120', true);
 
-
-
 CREATE TABLE IF NOT EXISTS `webproject`.`permissions` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
@@ -36,12 +34,22 @@ CREATE TABLE IF NOT EXISTS `webproject`.`permissions` (
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
+INSERT INTO `permissions` (`Id`, `name`, `description`) VALUES
+(1, 'Soporte', 'Agregar usuarios, dar roles y permisos');
+
+
 CREATE TABLE IF NOT EXISTS `webproject`.`rol` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
   `description` varchar(100) NOT NULL,
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+INSERT INTO `rol` (`Id`, `name`, `description`) VALUES
+(1, 'Auditor General', 'Tiene acceso a todos los modulos, asigna proyectos por sub auditor.');
+(2, 'Sub Auditor', 'Administra y designa los modulos a desarrollar por los auditores de campo.');
+(3, 'Auditor de campo', 'Se encarga de desarrollar y administrar las tareas de los modulos que se le designo.');
+
 
 CREATE TABLE IF NOT EXISTS `webproject`.`user_rol` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
@@ -52,6 +60,9 @@ CREATE TABLE IF NOT EXISTS `webproject`.`user_rol` (
   KEY `id_rol` (`id_rol`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
+INSERT INTO `user_rol` (`Id`, `id_user`, `id_rol`) VALUES
+(1, '23795053', '1');
+
 CREATE TABLE IF NOT EXISTS `webproject`.`rol_permissions` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `id_rol` int(11) NOT NULL,
@@ -60,6 +71,9 @@ CREATE TABLE IF NOT EXISTS `webproject`.`rol_permissions` (
   KEY `id_user` (`id_rol`),
   KEY `id_rol` (`id_permissions`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+INSERT INTO `rol_permissions` (`Id`, `id_rol`, `id_permissions`) VALUES
+(1, '1', '1');
 
 ALTER TABLE `user_rol`
   ADD CONSTRAINT `user_rol_ibfk_1` FOREIGN KEY (`id_rol`) REFERENCES `webproject`.`rol` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE,

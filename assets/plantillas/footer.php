@@ -19,6 +19,7 @@
         <!-- endinject -->
         <!-- authenticate:js -->
         <script>
+            redirectSessionEnd();
             setInterval('redirectSessionEnd()',300000);
             function redirectSessionEnd(){
                 $.ajax({

@@ -53,6 +53,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['login'] = 'sign_inController/login';
 $route['is_login'] = 'sign_inController/is_login';
 $route['forgot_password'] = 'sign_inController/forgot_password';
+$route['logout'] = 'sign_inController/logout';
 //sign_in
 
 //dashboard

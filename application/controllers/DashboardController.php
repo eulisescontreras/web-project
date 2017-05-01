@@ -20,6 +20,7 @@ class DashboardController extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('app/dashboard');
+		$this->data['permissions'] = $this->session->flashdata('permissions');
+		$this->load->view('app/dashboard',$this->data);
 	}
 }
