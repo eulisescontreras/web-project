@@ -55,14 +55,79 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link rel="stylesheet" href="/assets/css/dashboard/application.css">
     <link rel="stylesheet" href="/assets/css/dashboard/header.css">
     <link rel="stylesheet" href="/assets/css/dashboard/scroll.css">
+    <link rel="stylesheet" href="/assets/css/dashboard/modal.css">
+    <link rel="stylesheet" href="/assets/css/dashboard/link.css">
     <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/vendor/components-font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="/vendor/notyf/dist/notyf.min.css">
     <link rel="stylesheet" href="/assets/css/dashboard/tables.css">
+    <link rel="stylesheet" href="/vendor/jquery-progresstimer/dist/css/jquery.progresstimer.min.css">
     <!-- endinject -->
 
 </head>
 <body>
+<!-- Modal -->
+<div id="modal-add-user-data" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Datos del usuario</h4>
+        </div>
+        <div class="modal-body">
+            <div class="container">
+                <div class="loading-progress"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label>Cedula</label>
+                    <input id="id" type="number" class="form-control"/>
+                    <label>Primer Nombre</label>
+                    <input id="first_name" type="text" class="form-control"/>
+                    <label>Segundo Nombre</label>
+                    <input id="second_name" type="text" class="form-control"/>
+                    <label>Primer Apellido</label>
+                    <input id="surname" type="text" class="form-control"/>
+                    <label>Segundo Apellido</label>
+                    <input id="second_surname" type="text" class="form-control"/>
+                    <label>Email</label>
+                    <input id="email" type="email" class="form-control"/>
+                    <label>Nombre de usuario</label>
+                    <input id="username" type="text" class="form-control"/>
+                    <label>Contraseña</label>
+                    <input id="password" type="password" class="form-control"/>
+                    <label>Telefono</label>
+                    <input id="phone" type="number" class="form-control"/>
+                    <label>Dirección</label>
+                    <textarea id="address" class="form-control"></textarea>
+                </div>
+                <div class="col-md-6">
+                    <label>Roles</label>
+                    <select id="rols" class="form-control select2" style="width: 100%;">
+                    </select>
+                    <table id="table-modal" class="table">
+                        <thead>
+                            <tr>
+                                <th style="color:white;">Rol</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button id="addUser" type="button" class="btn btn-default modal-btn">Guardar</button>
+            <button type="button" class="btn btn-default modal-btn" data-dismiss="modal">Cerrar</button>
+        </div>
+    </div>
+
+  </div>
+</div>
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header is-small-screen">
     <header class="mdl-layout__header mdl-layout__header--transparent">
         <div class="mdl-layout__header-row">
@@ -248,43 +313,45 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <li class="mdl-menu__item mdl-list__item">
                     <span class="mdl-list__item-primary-content">
                         <i class="material-icons mdl-list__item-icon text-color--secondary">exit_to_app</i>
-                        <a href="<?php echo base_url(); ?>index.php/logout">Cerrar sesión</a>
+                        <a href="<?php echo base_url(); ?>index.php/logout" class="nounderline">Cerrar sesión</a>
                     </span>
                 </li>
             </ul>
-            <?php if($permissions['Soporte']){ ?>
-                <button id="more"
-                        class="mdl-button mdl-js-button mdl-button--icon">
-                    <i class="material-icons">more_vert</i>
-                </button>
-                <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect mdl-shadow--2dp settings-dropdown" for="more">
-                    <a class="mdl-menu__item" href="#">
-                        Soporte.
-                    </a>
-                </ul>
-            <?php } ?>
+            <!--<button id="more"
+                    class="mdl-button mdl-js-button mdl-button--icon">
+                <i class="material-icons">more_vert</i>
+            </button>
+            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect mdl-shadow--2dp settings-dropdown" for="more">
+                <a class="mdl-menu__item" href="#">
+                    Soporte.
+                </a>
+            </ul>-->
         </div>
     </header>
 
     <div class="mdl-layout__drawer">
         <header style="color:#dfb81c;">SISGEPRO</header>
         <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="<?php echo base_url(); ?>index.php/welcome">
+            <a class="mdl-navigation__link nounderline" href="<?php echo base_url(); ?>index.php/welcome">
                 <i class="material-icons" role="presentation">home</i>
                 Inicio
             </a>
-            <div class="sub-navigation">
-                <a class="mdl-navigation__link">
-                    <i class="material-icons">view_comfy</i>
-                    Sub-directory
-                    <i class="material-icons">keyboard_arrow_down</i>
-                </a>
-                <div class="mdl-navigation">
-                    <a class="mdl-navigation__link" href="#">
-                        option1
+            <?php if($permissions['Soporte']){ ?>
+                <div class="sub-navigation">
+                    <a href="#" class="mdl-navigation__link nounderline">
+                        <i class="material-icons">person_add</i>
+                        Usuarios
+                        <i class="material-icons">keyboard_arrow_down</i>
                     </a>
+                    <div class="mdl-navigation">
+                        <a class="mdl-navigation__link nounderline" href="<?php echo base_url(); ?>index.php/user/listado">
+                            <i class="material-icons">hdr_weak</i>
+                            Listado
+                            <i class="material-icons"></i>
+                        </a>
+                    </div>
                 </div>
-            </div>
+            <?php } ?>
         </nav>
     </div>
     <main class="mdl-layout__content">

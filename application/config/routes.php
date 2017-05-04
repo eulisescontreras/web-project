@@ -57,6 +57,15 @@ $route['logout'] = 'sign_inController/logout';
 $route['welcome'] = 'sign_inController/welcome';
 //sign_in
 
+//User
+$route['user/listado'] = 'userController/index';
+$route['user/listado_data'] = 'userController/table_users_data';
+$route['user/addUser'] = 'userController/addUser';
+//rol
+$route['rol/get_rols'] = 'rolController/send_rol';
+//rol
+//User
+
 //default
 $route['default_controller'] = 'sign_inController/index';
 $route['404_override'] = '';

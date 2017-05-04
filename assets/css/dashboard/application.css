@@ -6767,7 +6767,7 @@ input.mdl-button[type="submit"] {
 
 .mdl-menu__outline {
   display: block;
-  background-color: rgba(0,0,0,.5);
+  background-color: black;
   margin: 0;
   padding: 0;
   border: none;

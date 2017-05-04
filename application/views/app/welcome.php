@@ -112,128 +112,167 @@
                     </div>
                 </div>
             </div>
-            <!-- Table-->
-            <div style="overflow:auto !important;" class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone">
-                <div class="panel">
-                    <table id="table" class="table mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp projects-table">
-                        <thead>
-                        <tr>
-                            <th class="mdl-data-table__cell--non-numeric">Project</th>
-                            <th class="mdl-data-table__cell--non-numeric">Responsible</th>
-                            <th class="mdl-data-table__cell--non-numeric">Client contact</th>
-                            <th class="mdl-data-table__cell--non-numeric">Deadline</th>
-                            <th class="mdl-data-table__cell--non-numeric">Progress</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td class="mdl-data-table__cell--non-numeric">Darkboard</td>
-                            <td class="mdl-data-table__cell--non-numeric">
-                                <span class="label label--mini background-color--mint">Alex</span>
-                                <span class="label label--mini background-color--primary">Dina</span>
-                                <span class="label label--mini background-color--cerulean">Misha</span>
-                            </td>
-                            <td class="mdl-data-table__cell--non-numeric">Luke@skywalker.com</td>
-                            <td class="mdl-data-table__cell--non-numeric">15</td>
-                            <td class="mdl-data-table__cell--non-numeric">
-                                0%<div id="task0" class="mdl-progress mdl-js-progress"></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="mdl-data-table__cell--non-numeric">Big financial app</td>
-                            <td class="mdl-data-table__cell--non-numeric">
-                                <span class="label label--mini background-color--baby-blue">Vlada</span>
-                            </td>
-                            <td class="mdl-data-table__cell--non-numeric">Boss@financial.com</td>
-                            <td class="mdl-data-table__cell--non-numeric">Mar 1</td>
-                            <td class="mdl-data-table__cell--non-numeric">
-                                22%<div id="task22" class="mdl-progress mdl-js-progress"></div>
-                            </td>
-                        </tr>
-                        <tr class="is-selected">
-                            <td class="mdl-data-table__cell--non-numeric">New Year office decoration</td>
-                            <td class="mdl-data-table__cell--non-numeric">
-                                <span class="label label--mini background-color--primary">Dina</span>
-                                <span class="label label--mini background-color--baby-blue">Vlada</span>
-                            </td>
-                            <td class="mdl-data-table__cell--non-numeric">info@creativeit.io</td>
-                            <td class="mdl-data-table__cell--non-numeric">Dec 25</td>
-                            <td class="mdl-data-table__cell--non-numeric task-done">
-                                <i class="material-icons">done</i>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="mdl-data-table__cell--non-numeric">Don't worry, be happy!!!</td>
-                            <td class="mdl-data-table__cell--non-numeric">
-                                <span class="label label--mini background-color--secondary">Everybody</span>
-                            </td>
-                            <td class="mdl-data-table__cell--non-numeric">Contact@happyness.com</td>
-                            <td class="mdl-data-table__cell--non-numeric">Yesterday</td>
-                            <td class="mdl-data-table__cell--non-numeric">
-                                32%<div id="task32" class="mdl-progress mdl-js-progress"></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="mdl-data-table__cell--non-numeric">Don't worry, be happy!!!</td>
-                            <td class="mdl-data-table__cell--non-numeric">
-                                <span class="label label--mini background-color--secondary">Everybody</span>
-                            </td>
-                            <td class="mdl-data-table__cell--non-numeric">Contact@happyness.com</td>
-                            <td class="mdl-data-table__cell--non-numeric">Yesterday</td>
-                            <td class="mdl-data-table__cell--non-numeric">
-                                99%<div id="task99" class="mdl-progress mdl-js-progress"></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="mdl-data-table__cell--non-numeric">Don't worry, be happy!!!</td>
-                            <td class="mdl-data-table__cell--non-numeric">
-                                <span class="label label--mini background-color--secondary">Everybody</span>
-                            </td>
-                            <td class="mdl-data-table__cell--non-numeric">Contact@happyness.com</td>
-                            <td class="mdl-data-table__cell--non-numeric">Yesterday</td>
-                            <td class="mdl-data-table__cell--non-numeric">
-                                50%<div id="task50" class="mdl-progress mdl-js-progress"></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="mdl-data-table__cell--non-numeric">Don't worry, be happy!!!</td>
-                            <td class="mdl-data-table__cell--non-numeric">
-                                <span class="label label--mini background-color--secondary">Everybody</span>
-                            </td>
-                            <td class="mdl-data-table__cell--non-numeric">Contact@happyness.com</td>
-                            <td class="mdl-data-table__cell--non-numeric">Yesterday</td>
-                            <td class="mdl-data-table__cell--non-numeric">
-                                50%<div id="task50" class="mdl-progress mdl-js-progress"></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="mdl-data-table__cell--non-numeric">Don't worry, be happy!!!</td>
-                            <td class="mdl-data-table__cell--non-numeric">
-                                <span class="label label--mini background-color--secondary">Everybody</span>
-                            </td>
-                            <td class="mdl-data-table__cell--non-numeric">Contact@happyness.com</td>
-                            <td class="mdl-data-table__cell--non-numeric">Yesterday</td>
-                            <td class="mdl-data-table__cell--non-numeric">
-                                100%<div id="task100" class="mdl-progress mdl-js-progress"></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="mdl-data-table__cell--non-numeric">Don't worry, be happy!!!</td>
-                            <td class="mdl-data-table__cell--non-numeric">
-                                <span class="label label--mini background-color--secondary">Everybody</span>
-                            </td>
-                            <td class="mdl-data-table__cell--non-numeric">Contact@happyness.com</td>
-                            <td class="mdl-data-table__cell--non-numeric">Yesterday</td>
-                            <td class="mdl-data-table__cell--non-numeric">
-                                100%<div id="task100" class="mdl-progress mdl-js-progress"></div>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
+        </div>
+    </div>
+    <!-- Table-->
+    <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone">
+        <div class="panel">
+            <table id="table" class="table mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp projects-table">
+                <thead>
+                    <tr>
+                        <th class="mdl-data-table__cell--non-numeric">Project</th>
+                        <th class="mdl-data-table__cell--non-numeric">Responsible</th>
+                        <th class="mdl-data-table__cell--non-numeric">Client contact</th>
+                        <th class="mdl-data-table__cell--non-numeric">Deadline</th>
+                        <th class="mdl-data-table__cell--non-numeric">Progress</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="mdl-data-table__cell--non-numeric">Darkboard</td>
+                        <td class="mdl-data-table__cell--non-numeric">
+                            <span class="label label--mini background-color--mint">Alex</span>
+                            <span class="label label--mini background-color--primary">Dina</span>
+                            <span class="label label--mini background-color--cerulean">Misha</span>
+                        </td>
+                        <td class="mdl-data-table__cell--non-numeric">Luke@skywalker.com</td>
+                        <td class="mdl-data-table__cell--non-numeric">15</td>
+                        <td class="mdl-data-table__cell--non-numeric">
+                            0%<div id="task0" class="mdl-progress mdl-js-progress"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="mdl-data-table__cell--non-numeric">Big financial app</td>
+                        <td class="mdl-data-table__cell--non-numeric">
+                            <span class="label label--mini background-color--baby-blue">Vlada</span>
+                        </td>
+                        <td class="mdl-data-table__cell--non-numeric">Boss@financial.com</td>
+                        <td class="mdl-data-table__cell--non-numeric">Mar 1</td>
+                        <td class="mdl-data-table__cell--non-numeric">
+                            22%<div id="task22" class="mdl-progress mdl-js-progress"></div>
+                        </td>
+                    </tr>
+                    <tr class="is-selected">
+                        <td class="mdl-data-table__cell--non-numeric">New Year office decoration</td>
+                        <td class="mdl-data-table__cell--non-numeric">
+                            <span class="label label--mini background-color--primary">Dina</span>
+                            <span class="label label--mini background-color--baby-blue">Vlada</span>
+                        </td>
+                        <td class="mdl-data-table__cell--non-numeric">info@creativeit.io</td>
+                        <td class="mdl-data-table__cell--non-numeric">Dec 25</td>
+                        <td class="mdl-data-table__cell--non-numeric task-done">
+                            <i class="material-icons">done</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="mdl-data-table__cell--non-numeric">Don't worry, be happy!!!</td>
+                        <td class="mdl-data-table__cell--non-numeric">
+                            <span class="label label--mini background-color--secondary">Everybody</span>
+                        </td>
+                        <td class="mdl-data-table__cell--non-numeric">Contact@happyness.com</td>
+                        <td class="mdl-data-table__cell--non-numeric">Yesterday</td>
+                        <td class="mdl-data-table__cell--non-numeric">
+                            32%<div id="task32" class="mdl-progress mdl-js-progress"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="mdl-data-table__cell--non-numeric">Don't worry, be happy!!!</td>
+                        <td class="mdl-data-table__cell--non-numeric">
+                            <span class="label label--mini background-color--secondary">Everybody</span>
+                        </td>
+                        <td class="mdl-data-table__cell--non-numeric">Contact@happyness.com</td>
+                        <td class="mdl-data-table__cell--non-numeric">Yesterday</td>
+                        <td class="mdl-data-table__cell--non-numeric">
+                            99%<div id="task99" class="mdl-progress mdl-js-progress"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="mdl-data-table__cell--non-numeric">Don't worry, be happy!!!</td>
+                        <td class="mdl-data-table__cell--non-numeric">
+                            <span class="label label--mini background-color--secondary">Everybody</span>
+                        </td>
+                        <td class="mdl-data-table__cell--non-numeric">Contact@happyness.com</td>
+                        <td class="mdl-data-table__cell--non-numeric">Yesterday</td>
+                        <td class="mdl-data-table__cell--non-numeric">
+                            50%<div id="task50" class="mdl-progress mdl-js-progress"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="mdl-data-table__cell--non-numeric">Don't worry, be happy!!!</td>
+                        <td class="mdl-data-table__cell--non-numeric">
+                            <span class="label label--mini background-color--secondary">Everybody</span>
+                        </td>
+                        <td class="mdl-data-table__cell--non-numeric">Contact@happyness.com</td>
+                        <td class="mdl-data-table__cell--non-numeric">Yesterday</td>
+                        <td class="mdl-data-table__cell--non-numeric">
+                            50%<div id="task50" class="mdl-progress mdl-js-progress"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="mdl-data-table__cell--non-numeric">Don't worry, be happy!!!</td>
+                        <td class="mdl-data-table__cell--non-numeric">
+                            <span class="label label--mini background-color--secondary">Everybody</span>
+                        </td>
+                        <td class="mdl-data-table__cell--non-numeric">Contact@happyness.com</td>
+                        <td class="mdl-data-table__cell--non-numeric">Yesterday</td>
+                        <td class="mdl-data-table__cell--non-numeric">
+                            100%<div id="task100" class="mdl-progress mdl-js-progress"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="mdl-data-table__cell--non-numeric">Don't worry, be happy!!!</td>
+                        <td class="mdl-data-table__cell--non-numeric">
+                            <span class="label label--mini background-color--secondary">Everybody</span>
+                        </td>
+                        <td class="mdl-data-table__cell--non-numeric">Contact@happyness.com</td>
+                        <td class="mdl-data-table__cell--non-numeric">Yesterday</td>
+                        <td class="mdl-data-table__cell--non-numeric">
+                            100%<div id="task100" class="mdl-progress mdl-js-progress"></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br/>
+            <div>
+                <button style="float: right;" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--fab mdl-shadow--8dp mdl-button--colored ">
+                    <i class="material-icons mdl-js-ripple-effect">add</i>
+                </button>
             </div>
         </div>
-
+    </div>
+    <br/>
+    <!-- Table-->
+    <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone">
+        <div class="panel">
+            <table id="tableNoData" class="table mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp projects-table">
+                <thead>
+                    <tr>
+                        <th class="mdl-data-table__cell--non-numeric">Project</th>
+                        <th class="mdl-data-table__cell--non-numeric">Responsible</th>
+                        <th class="mdl-data-table__cell--non-numeric">Client contact</th>
+                        <th class="mdl-data-table__cell--non-numeric">Deadline</th>
+                        <th class="mdl-data-table__cell--non-numeric">Progress</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="mdl-data-table__cell--non-numeric"></td>
+                        <td class="mdl-data-table__cell--non-numeric"></td>
+                        <td class="mdl-data-table__cell--non-numeric">No existen registros</td>
+                        <td class="mdl-data-table__cell--non-numeric"></td>
+                        <td class="mdl-data-table__cell--non-numeric"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br/>
+            <div>
+                <button style="float: right;" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--fab mdl-shadow--8dp mdl-button--colored ">
+                    <i class="material-icons mdl-js-ripple-effect">add</i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="mdl-grid mdl-grid--no-spacing">
         <div class="mdl-grid mdl-cell mdl-cell--3-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone mdl-cell--top">
             <!-- Robot card-->
             <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--6-col-tablet mdl-cell--2-col-phone">

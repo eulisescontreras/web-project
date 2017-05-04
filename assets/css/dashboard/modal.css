@@ -1,0 +1,49 @@
+.modal-header{
+    background: url('/assets/img/blur-bg-2.jpg') center / cover; 
+    background-repeat: no-repeat; 
+    background-position: top center;
+}
+
+.modal-body{
+    overflow-y:scroll; 
+    height: 400px; 
+    background: url('/assets/img/blur-bg.jpg') center / cover;  
+    padding:6% !important;
+}
+
+.modal-footer{
+    background: url('/assets/img/blur-bg-2.jpg') center / cover; 
+    background-repeat: no-repeat; 
+    background-position: bottom center;
+}
+
+.modal-content input{
+    background-color:transparent; 
+    color:white;
+}
+
+.modal-content select{
+    background-color:transparent; 
+    color:white;
+}
+
+.modal-content textarea{
+    background-color:transparent; 
+    color:white; 
+    resize:none;
+}
+
+.modal-content label, .modal-content h4{
+    color:white; 
+}
+
+.modal-btn{
+    background-color:transparent !important; 
+    color:white !important;    
+}
+
+.close{
+    color:white !important;
+}
+
+

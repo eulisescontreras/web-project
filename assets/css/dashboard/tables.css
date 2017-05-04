@@ -41,6 +41,27 @@ table.dataTable tbody tr {
 }
 
 .panel {
-    padding: 3%; 
+    
+    padding: 3%;
+    padding-bottom:8%;
     background-color: rgba(0,0,0,.5);
 }
+
+@media screen and (max-width: 808px) {
+  .panel {
+    padding-bottom:12%;
+  }
+}
+
+@media screen and (max-width: 555px) {
+  .panel {
+    padding-bottom:16%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .panel {
+    padding-bottom:18%;
+  }
+}
+

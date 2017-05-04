@@ -20,6 +20,8 @@
     "getmdl-dashboard": "material-dashboard-lite#^1.0.0-b",
     "components-font-awesome": "^4.7.0",
     "datatables": "DataTables#^1.10.15",
-    "browser-sync-client": "^2.4.5"
+    "browser-sync-client": "^2.4.5",
+    "notyf": "^2.0.1",
+    "jquery-progresstimer": "^1.0.7"
   }
 }

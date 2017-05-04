@@ -17,13 +17,35 @@
         <script src="/assets/js/dashboard/widgets/todo/todo.js"></script>
         <script src="/vendor/jquery/dist/jquery.min.js"></script>
         <script src="/vendor/datatables/media/js/jquery.dataTables.min.js"></script>
-        
+        <script src="/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="/vendor/notyf/dist/notyf.min.js"></script>
+        <script src="/vendor/jquery-progresstimer/dist/js/jquery.progresstimer.min.js"></script>
+        <?php include 'assets/js/user/userJS.php' ?>
         <!-- endinject -->
         <!-- authenticate:js -->
         <script>
             $('#table').DataTable({
                 "scrollX": true
             });
+            
+            $('#tableNoData').DataTable({
+                "scrollX": true
+            });
+            
+            tableUsers = $('#tableUsers').dataTable({
+              "scrollX": true,
+              "ajax": "<?php echo base_url(); ?>index.php/user/listado_data",
+              columns: [
+                    //{"data":"checkbox"},
+                    {"data":"username"},
+                    {"data":"password"},
+                    {"data":"rols"},
+                    {"data":"permissions"},
+                    {"data":"complete_name"},
+                    {"data":"start_date"}
+              ]
+            });
+            
             redirectSessionEnd();
             setInterval('redirectSessionEnd()',300000);
             function redirectSessionEnd(){
