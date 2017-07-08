@@ -1,5 +1,7 @@
 <?php include 'assets/plantillas/header.php' ?>
-        <div class="mdl-grid mdl-cell mdl-cell--9-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone mdl-cell--top">
+        <div id="error" style="background:white;">
+        </div>
+        <div id="listado" class="mdl-grid mdl-cell mdl-cell--9-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone mdl-cell--top">
             <!-- Table-->
             <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone">
                 <div class="panel">

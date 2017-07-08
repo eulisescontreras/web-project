@@ -51,18 +51,17 @@ class Sign_inController extends CI_Controller {
 					"Rols" => $rols,
 					"Personal_data" => $personalData
 			  );
-			  //echo json_encode($personalData);
 			  $this->session->set_userdata($userCredentials);
 			  redirect('welcome');
 			}else{
 			  $this->session->set_flashdata('message',"Usuario no registrado.");
 			}
 		}elseif($this->input->post("Username") == "" and  $this->input->post("Password") == "")
-			$this->session->set_flashdata('message',"Error la contraseña y el usuario son requeridos.");		
+			$this->session->set_flashdata('message',LOGING_PASSWORD_USER_ERROR_REQUIRED);		
 		elseif($this->input->post("Password") == "")
-			$this->session->set_flashdata('message',"Error la contraseña es requerida.");		
+			$this->session->set_flashdata('message',LOGING_PASSWORD_ERROR_REQUIRED);		
 		elseif($this->input->post("Username") == "")
-			$this->session->set_flashdata('message', "Error el usuario es requerido.");
+			$this->session->set_flashdata('message',LOGING_USER_ERROR_REQUIRED);
 		redirect(base_url());
 	}
 	

@@ -41,7 +41,19 @@ class UserController extends CI_Controller {
 	}
 	
 	public function addUser(){
-		//$this->UserModel->add_user($_POST['personal_data'],$_POST['rols']);
-		echo json_encode($_POST['personal_data']);
+		$text = "";
+		if(!$this->UserModel->userExist($this->input->post('personal_data')[0]) && !$this->UserModel->userNameExist($this->input->post('personal_data')[6]))
+		{
+			$this->UserModel->add_user($this->input->post('personal_data'),$this->input->post('rols'));
+			$text = USER_REGISTERED_SUCCESS;
+		}else
+		{
+			if($this->UserModel->userExist($this->input->post('personal_data')[0]))
+				$text = USER_REGISTER_ERROR;
+			else if($this->UserModel->userNameExist($this->input->post('personal_data')[6]))
+				$text = USERNAME_REGISTER_ERROR;
+		}
+		echo json_encode($text);
+			
 	}
 }

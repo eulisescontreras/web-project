@@ -83,3 +83,14 @@ defined('EXIT_USER_INPUT')     OR define('EXIT_USER_INPUT', 7); // invalid user 
 defined('EXIT_DATABASE')       OR define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
+
+
+//CONSTANTS MESSAGE MODAL
+define('USER_REGISTERED_SUCCESS',1);
+define('USER_REGISTER_ERROR',2);
+define('USERNAME_REGISTER_ERROR',3);
+
+//CONSTANTS MESSAGE TEXT
+define('LOGING_PASSWORD_USER_ERROR_REQUIRED','Error la contraseña y el usuario son requeridos.');
+define('LOGING_PASSWORD_ERROR_REQUIRED','Error la contraseña es requerida.');
+define('LOGING_USER_ERROR_REQUIRED','Error el usuario es requerido.');

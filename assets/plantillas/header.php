@@ -111,6 +111,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <table id="table-modal" class="table">
                         <thead>
                             <tr>
+                                <th></th>
                                 <th style="color:white;">Rol</th>
                             </tr>
                         </thead>
@@ -122,12 +123,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
         <div class="modal-footer">
             <button id="addUser" type="button" class="btn btn-default modal-btn">Guardar</button>
-            <button type="button" class="btn btn-default modal-btn" data-dismiss="modal">Cerrar</button>
+            <button id="cancel" type="button" class="btn btn-default modal-btn" data-dismiss="modal">Cerrar</button>
         </div>
     </div>
 
   </div>
 </div>
+<!-- Modal -->
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header is-small-screen">
     <header class="mdl-layout__header mdl-layout__header--transparent">
         <div class="mdl-layout__header-row">
@@ -346,7 +348,71 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="mdl-navigation">
                         <a class="mdl-navigation__link nounderline" href="<?php echo base_url(); ?>index.php/user/listado">
                             <i class="material-icons">hdr_weak</i>
-                            Listado
+                            <span style="text-align: right;">Listado</span>
+                            <i class="material-icons"></i>
+                        </a>
+                    </div>
+                </div>
+            <?php } ?>
+            <?php if($permissions['Soporte'] || $permissions['Proyectos']){ ?>
+                <div class="sub-navigation">
+                    <a href="#" class="mdl-navigation__link nounderline">
+                        <i class="material-icons">dns</i>
+                        Proyectos
+                        <i class="material-icons">keyboard_arrow_down</i>
+                    </a>
+                    <?php if($permissions['Soporte']){ ?>
+                        <div class="mdl-navigation">
+                            <a class="mdl-navigation__link nounderline" href="<?php echo base_url(); ?>index.php/user/listado">
+                                <i class="material-icons">hdr_weak</i>
+                                Asignar
+                                <i class="material-icons"></i>
+                            </a>
+                        </div>
+                        <div class="mdl-navigation">
+                            <a class="mdl-navigation__link nounderline" href="<?php echo base_url(); ?>index.php/user/listado">
+                                <i class="material-icons">hdr_weak</i>
+                                Sin asignar
+                                <i class="material-icons"></i>
+                            </a>
+                        </div>
+                    <?php } ?>
+                    <div class="mdl-navigation">
+                        <a class="mdl-navigation__link nounderline" href="<?php echo base_url(); ?>index.php/user/listado">
+                            <i class="material-icons">hdr_weak</i>
+                            Asignados
+                            <i class="material-icons"></i>
+                        </a>
+                    </div>
+                </div>
+            <?php } ?>
+            <?php if($permissions['Soporte'] || $permissions['Proyectos'] || $permissions['Modulos']){ ?>
+                <div class="sub-navigation">
+                    <a href="#" class="mdl-navigation__link nounderline">
+                        <i class="material-icons">assignment</i>
+                        Modulos
+                        <i class="material-icons">keyboard_arrow_down</i>
+                    </a>
+                    <?php if($permissions['Soporte'] || $permissions['Proyectos']){ ?>
+                        <div class="mdl-navigation">
+                            <a class="mdl-navigation__link nounderline" href="<?php echo base_url(); ?>index.php/user/listado">
+                                <i class="material-icons">hdr_weak</i>
+                                Asignar
+                                <i class="material-icons"></i>
+                            </a>
+                        </div>
+                        <div class="mdl-navigation">
+                            <a class="mdl-navigation__link nounderline" href="<?php echo base_url(); ?>index.php/user/listado">
+                                <i class="material-icons">hdr_weak</i>
+                                Sin asignar
+                                <i class="material-icons"></i>
+                            </a>
+                        </div>
+                    <?php } ?>
+                    <div class="mdl-navigation">
+                        <a class="mdl-navigation__link nounderline" href="<?php echo base_url(); ?>index.php/user/listado">
+                            <i class="material-icons">hdr_weak</i>
+                            Asignados
                             <i class="material-icons"></i>
                         </a>
                     </div>

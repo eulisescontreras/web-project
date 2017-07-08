@@ -34,9 +34,16 @@
             
             tableUsers = $('#tableUsers').dataTable({
               "scrollX": true,
-              "ajax": "<?php echo base_url(); ?>index.php/user/listado_data",
+              "ajax":{
+                       "url": "<?php echo base_url(); ?>index.php/user/listado_data",
+                       "type": 'POST',
+                       "error": function (ajaxContext) {
+                            $("#error").html(ajaxContext["responseText"]);
+                            $("#listado").addClass("hidden");
+                        }
+                    }, 
+              "bDestroy": true,
               columns: [
-                    //{"data":"checkbox"},
                     {"data":"username"},
                     {"data":"password"},
                     {"data":"rols"},

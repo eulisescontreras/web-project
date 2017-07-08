@@ -13,9 +13,9 @@ class UserModel extends CI_Model{
         $data[]=[];
         $dataComplete = new stdClass;
         
-        $auxPersonalData = "SELECT uurrpr.username, uurrpr.complete_name, uurrpr.password, uurrpr.start_date FROM (SELECT name,uurrp.id_rol,uurrp.username, uurrp.complete_name, uurrp.password, uurrp.start_date FROM (SELECT rp.id_rol,id_permissions,uur.username, uur.complete_name, uur.password, uur.start_date FROM (SELECT id_rol,u.username, u.complete_name, u.password, u.start_date FROM (SELECT Id,username,CONCAT(first_name,' ',second_name,' ',surname,' ',second_surname) AS 'complete_name',AES_DECRYPT(password,'webproject') AS 'password', DATE_FORMAT(start_date, '%d-%m-%Y') AS 'start_date' FROM user) u INNER JOIN user_rol ur ON u.Id = ur.id_user) uur INNER JOIN rol_permissions rp ON uur.id_rol = rp.id_rol) uurrp INNER JOIN permissions p ON uurrp.id_permissions = p.Id) uurrpr INNER JOIN rol ro ON uurrpr.id_rol = ro.Id GROUP BY uurrpr.complete_name";
+        $auxPersonalData = "SELECT uurrpr.iduser ,uurrpr.username, uurrpr.complete_name, uurrpr.password, uurrpr.start_date FROM (SELECT name,uurrp.id_rol,uurrp.username, uurrp.complete_name, uurrp.password,uurrp.iduser, uurrp.start_date FROM (SELECT rp.id_rol,id_permissions,uur.iduser,uur.username, uur.complete_name, uur.password, uur.start_date FROM (SELECT id_rol,u.iduser,u.username, u.complete_name, u.password, u.start_date FROM (SELECT Id AS 'iduser',username,CONCAT(first_name,' ',second_name,' ',surname,' ',second_surname) AS 'complete_name',AES_DECRYPT(password,'webproject') AS 'password', DATE_FORMAT(start_date, '%d-%m-%Y') AS 'start_date' FROM user) u INNER JOIN user_rol ur ON u.iduser = ur.id_user) uur INNER JOIN rol_permissions rp ON uur.id_rol = rp.id_rol) uurrp INNER JOIN permissions p ON uurrp.id_permissions = p.Id) uurrpr INNER JOIN rol ro ON uurrpr.id_rol = ro.Id GROUP BY uurrpr.complete_name";
         $personalDatas = $this->db->query($auxPersonalData)->result_array();
-        $color = array('background-color--mint','background-color--primary','background-color--cerulean');
+        $color = array('background-color--mint','background-color--primary','background-color--cerulean','background-color--secondary');
         
         $data[0]['username'] = "";
         $data[0]['password'] = "";
@@ -27,25 +27,25 @@ class UserModel extends CI_Model{
             $auxr = "";
             $auxp = "";
             
-            //$data[$i]['checkbox'] = '<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label>';
             $data[$i]['username'] = '<div class="mdl-data-table__cell--non-numeric">'.$personalData['username'].'</div>';
             $data[$i]['password'] = '<div class="mdl-data-table__cell--non-numeric">'.$personalData['password'].'</div>';
             
-            $auxRol = "SELECT ro.name AS 'rol' FROM (SELECT name,uurrp.id_rol,uurrp.username, uurrp.complete_name, uurrp.password, uurrp.start_date FROM (SELECT rp.id_rol,id_permissions,uur.username, uur.complete_name, uur.password, uur.start_date FROM (SELECT id_rol,u.username, u.complete_name, u.password, u.start_date FROM (SELECT Id,username,CONCAT(first_name,' ',second_name,' ',surname,' ',second_surname) AS 'complete_name',AES_DECRYPT(password,'webproject') AS 'password', DATE_FORMAT(start_date, '%d-%m-%Y') AS 'start_date' FROM user WHERE username='".$personalData['username']."' AND AES_DECRYPT(password,'webproject')=".$personalData['password'].") u INNER JOIN user_rol ur ON u.Id = ur.id_user) uur INNER JOIN rol_permissions rp ON uur.id_rol = rp.id_rol) uurrp INNER JOIN permissions p ON uurrp.id_permissions = p.Id) uurrpr INNER JOIN rol ro ON uurrpr.id_rol = ro.Id GROUP BY ro.name";
+            $auxRol = "SELECT name AS 'rol' FROM (SELECT ur.id_rol AS 'idrol' FROM (SELECT Id AS 'iduser' FROM user WHERE id =".$personalData['iduser'].") u INNER JOIN user_rol ur ON u.iduser = ur.id_user) uur INNER JOIN rol r ON uur.idrol = r.Id ORDER BY name";
             $rols = $this->db->query($auxRol)->result_array();
             
             foreach($rols as $rol){
                 $auxr = $auxr.'<span class="label label--mini '.$color[$j].'">'.$rol['rol'].'</span>';
-                if($j == 2) $j = 0; else $j++;
+                if($j == 3){ $j = 0; $auxr = $auxr.'<br/>'; }else $j++;
             }
             $data[$i]['rols'] = '<div class="mdl-data-table__cell--non-numeric">'.$auxr.'</div>';
             
-            $auxPermission = "SELECT uurrpr.name AS 'permissions' FROM (SELECT name,uurrp.id_rol,uurrp.username, uurrp.complete_name, uurrp.password, uurrp.start_date FROM (SELECT rp.id_rol,id_permissions,uur.username, uur.complete_name, uur.password, uur.start_date FROM (SELECT id_rol,u.username, u.complete_name, u.password, u.start_date FROM (SELECT Id,username,CONCAT(first_name,' ',second_name,' ',surname,' ',second_surname) AS 'complete_name',AES_DECRYPT(password,'webproject') AS 'password', DATE_FORMAT(start_date, '%d-%m-%Y') AS 'start_date' FROM user WHERE username='".$personalData['username']."' AND AES_DECRYPT(password,'webproject')=".$personalData['password'].") u INNER JOIN user_rol ur ON u.Id = ur.id_user) uur INNER JOIN rol_permissions rp ON uur.id_rol = rp.id_rol) uurrp INNER JOIN permissions p ON uurrp.id_permissions = p.Id) uurrpr INNER JOIN rol ro ON uurrpr.id_rol = ro.Id GROUP BY uurrpr.name";
+            $auxPermission = "SELECT name AS 'permissions' FROM (SELECT id_permissions FROM (SELECT idrol FROM (SELECT ur.id_rol AS 'idrol' FROM (SELECT Id AS 'iduser' FROM user WHERE id =".$personalData['iduser'].") u INNER JOIN user_rol ur ON u.iduser = ur.id_user) uur INNER JOIN rol r ON uur.idrol = r.Id) uurr INNER JOIN rol_permissions rp ON uurr.idrol = rp.id_rol) uurrrp INNER JOIN permissions p ON uurrrp.id_permissions = p.Id  GROUP BY permissions";
             $permissions = $this->db->query($auxPermission)->result_array();
             
+            $j = 0;
             foreach($permissions as $permission){
                 $auxp = $auxp.'<span class="label label--mini '.$color[$j].'">'.$permission['permissions'].'</span>';
-                if($j == 2) $j = 0; else $j++;
+                if($j == 3){ $j = 0; $auxp = $auxp.'<br/>'; }else $j++;
             }
             $data[$i]['permissions'] = '<div class="mdl-data-table__cell--non-numeric">'.$auxp.'</div>';
         
@@ -60,36 +60,35 @@ class UserModel extends CI_Model{
     }
     
     public function add_user($personal_data,$rols){
-        /*$user = array(
-           'Id'              => $personal_data['id'], 
-           'first_name'      => $personal_data['first_name'], 
-           'second_name'     => $personal_data['second_name'], 
-           'surname'         => $personal_data['surname'], 
-           'second_surname'  => $personal_data['second_surname'], 
-           'email'           => $personal_data['email'], 
-           'username'        => $personal_data['username'], 
-           'password'        => $personal_data['password'], 
-           'address'         => $personal_data['address'], 
-           'phone'           => $personal_data['phone'], 
-           'start_date'      => date("Y").date("m").(date("d")-1),
-           'active'          => TRUE
-        );
-        $this->db->insert('user', $user); */
-        $string = "hola";
-        /*foreach($rols as $rol){
-            $string = $string ."  ". $rol;
-        }*/
-        /*$user_rol = array(
-             'id_user' => $personal_data['id'],
-             'id_rol'  => $this->db->select('Id')
-                                   ->from('rol')
-                                   ->where('name',$rol)
-                                   ->get()
-                                   ->row()
-                                   ->Id;
-        );*/
+        $data = $personal_data[0].",'".$personal_data[1]."','".$personal_data[2]."','".$personal_data[3]."','".$personal_data[4]."','".$personal_data[5]."','".$personal_data[6]."',AES_ENCRYPT('".$personal_data[7]."','webproject'),'".$personal_data[8]."','".$personal_data[9]."','".date('Ymd')."',TRUE";
+        $this->db->query("INSERT INTO user(Id,first_name,second_name,surname,second_surname,email,username,password,address,phone,start_date,active) VALUES (".$data.")");
+        foreach($rols as $rol)
+        {
+            $user_rol = array(
+                 'id_user' => $personal_data[0],
+                 'id_rol'  => $this->db->select('Id')
+                                       ->from('rol')
+                                       ->where('name',$rol)
+                                       ->get()
+                                       ->row()
+                                       ->Id
+            );
+            $this->db->insert('user_rol',$user_rol);
+        }
         
-        //$this->db->insert('user_rol',$user_rol);
-        return $string;
+    }
+    
+    public function userExist($id){
+        return ($this->db->select('Id')
+                         ->from('user')
+                         ->where('Id',$id)
+                         ->get()->result_array() != null);
+    }
+    
+    public function userNameExist($username){
+        return ($this->db->select('username')
+                         ->from('user')
+                         ->where('username',$username)
+                         ->get()->result_array() != null);
     }
 }
